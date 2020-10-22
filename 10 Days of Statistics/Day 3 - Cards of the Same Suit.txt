@@ -1,0 +1,21 @@
+Day 3 - Cards of the Same Suit
+
+Permutations
+An ordered arrangement of r objects from a set, A, of n objects is called an r-element permutation of A. You can also think of this as a permutation of A's elements taken r at a time. The number of r-element permutations of an n-object set is denoted by the following formula: 
+nPr = n! / (n-r)!
+Note: We define 0! to be 1; otherwise, nPn would be n!/0 (when r = n).
+
+Combinations
+An unordered arrangement of r objects from a set, A, of n objects is called an r-element combination of A. You can also think of this as a combination of A's elements taken r at a time.
+Because the only difference between permutations and combinations is that combinations are unordered, we can easily find the number of r-element combinations by dividing out the permutations (r!):
+nCr = nPr / r! = n! / r!(n-r)!
+When we talk about combinations, we're talking about the number of subsets of size r that can be made from a set of size n. In fact, nCr is often referred to as "n choose r", because it's counting the number of r-element combinations that can be chosen from a set of n elements.
+
+Task: 
+You draw 3 cards from a standard 52-card deck without replacing them. What is the probability that both cards are of the same suit?
+
+Solution:
+(1) There are 13 cards of each suit. Draw one card. It can be anything with probability of 1. Now there are 51 cards left and 12 of them are the same suit as the first card you drew. So the chance the second card matches the 1st is 12/51.
+
+(2) 4C1 * 13C2 / 52C2
+

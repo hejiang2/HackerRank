@@ -1,0 +1,24 @@
+Bayes' Theorem:
+Historical data shows that it has only rained 5 days per year in some desert region (assuming a 365 day year). A meteorologist predicts that it will rain today. When it actually rains, the meteorologist correctly predicts rain 98% of the time. When it doesn't rain, the meteorologist incorrectly predicts rain 10% of the time. Find the probability that it will rain today.
+
+In this question, the probability of rain tomorrow depends on whether or not it rains today. We define the following events:
+
+Event R: It rains today. P(R) = 5/365
+Event R^C: It doesn't rain today. P(R^C) = 360/365
+Event M: The meteorologist predicted it will rain today: P(M|R) = 9/10, P(M|R^C) = 1/10
+
+P(R|M) = (P(R)*P(M|R)) / (P(R)*P(M|R) + P(R^C)P(M|R^C)) = 9/81
+
+Task:
+
+Suppose a family has  children, one of which is a boy. What is the probability that both children are boys?
+
+Solution:
+The question is asking if we know that at least one is a boy then what is the probability that they are both boys.
+P = 1(BB)/3(BB,BG,GB)
+
+P(B|A) = P(B AND A)/P(A)
+Assume B: Both are boys, A: One is a Boy
+We have to calculate P(B|A) so we need to know P(B AND A) and P(A).
+P(A) = 3/4 ( since it can be BG, GB, BB out of 4 ) P(B AND A) = P(B) = 1/4.
+Note that B is a subset of A so (B AND A) = B.
