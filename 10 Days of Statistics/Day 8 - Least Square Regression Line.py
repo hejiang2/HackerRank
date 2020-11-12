@@ -13,3 +13,12 @@
 # Coefficient of determination (R-squared)
 # R^2 = SSR/SST = 1 - SSE/SST
 # R^2 multiplied by 100 gives the percent of variation attributed to the linear regression between Y and X.
+
+# * unpacks every item from a list (iterable) to a separate argument.
+# zip(*p) passes all the items inside the p as arguments to the zip function.
+n = 5
+x, y = zip(*[map(int, input().split()) for i in range(n)])
+sum_xy = sum([x*y for x, y in zip(x,y)])
+b = (n * sum_xy - sum(x) * sum(y)) / (n * sum([x**2 for x in x]) - sum(x) ** 2)
+a = sum(y)/n - b * sum(x)/n
+print('{:.3f}'.format(a+b*80))
